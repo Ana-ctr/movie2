@@ -14,12 +14,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Lesson/>}> </Route>
-          <Route path="details" element={<Lesson1/>}> </Route>
+          <Route path="details/:id" element={<Lesson1/>}> </Route>
           <Route path="header" element={<Header/>}> </Route>
           <Route path="category" element={<App1/>}> </Route>
           <Route path="popular" element={<App2/>}> </Route>
-
-
+ 
 
         </Routes>
       </BrowserRouter>

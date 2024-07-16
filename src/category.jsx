@@ -1,30 +1,52 @@
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
 
 function App1() {
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [sortOrder, setSortOrder] = useState('asc');  // Zustand für die Sortierreihenfolge
 
     useEffect(() => {
         const fetchMovies = async () => {
+            setLoading(true);
+            setError(null);
             try {
                 const response = await axios.get('https://freetestapi.com/api/v1/movies');
-                setMovies(response.data);
-                setLoading(false);
+                let sortedMovies = response.data;
+
+                // Filme sortieren basierend auf sortOrder
+                sortedMovies = sortedMovies.sort((a, b) => {
+                    if (sortOrder === 'asc') {
+                        return a.title.localeCompare(b.title);
+                    } else {
+                        return b.title.localeCompare(a.title);
+                    }
+                });
+
+                setMovies(sortedMovies);
             } catch (error) {
                 setError('Error fetching data');
+            } finally {
                 setLoading(false);
             }
         };
 
         fetchMovies();
-    }, []);
+    }, [sortOrder]);  // Abhängigkeit hinzugefügt, um bei Änderung der Sortierreihenfolge die Daten erneut abzurufen
 
     return (
         <div className="App">
-           
+            <header className="App-header">
+                <h1>My Movie Website</h1>
+                <div>
+                    <select value={sortOrder} onChange={e => setSortOrder(e.target.value)}>
+                        <option value="asc">Ascending</option>
+                        <option value="desc">Descending</option>
+                    </select>
+                </div>
+            </header>
             <main className="App-main">
                 {loading && <p>Loading...</p>}
                 {error && <p>{error}</p>}
