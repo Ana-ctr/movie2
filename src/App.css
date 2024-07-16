@@ -6,6 +6,182 @@
   height: 40vmin;
   pointer-events: none;
 }
+/* src/components/MovieList.css */
+
+
+/* App.css */
+.movie-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+/* App.css */
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ex1 {
+  overflow: auto;
+}
+/* App.css */
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ex1 {
+  overflow: auto;
+}
+
+.block {
+  background-color: #f8f9fa;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+img {
+  border-radius: 5px;
+}
+
+h5 {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+
+p {
+  margin: 0.2em 0;
+}
+
+.search-form {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+/* App.css */
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ex1 {
+  overflow: auto;
+}
+
+.block {
+  background-color: #f8f9fa;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+img {
+  border-radius: 5px;
+}
+
+h5 {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+
+p {
+  margin: 0.2em 0;
+}
+/* Header.css */
+.header {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+ 
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.header h4 {
+  font-size: 1.2em;
+  margin-top: 0;
+}
+
+.movie-details {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.movie-details img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.movie-details p {
+  margin: 5px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #f8f9fa;
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-left: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+
+.block {
+  background-color: #f8f9fa;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+img {
+  border-radius: 5px;
+}
+
+h5 {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+
+p {
+  margin: 0.2em 0;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
